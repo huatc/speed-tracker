@@ -1,0 +1,14 @@
+{
+  "name": "Speed Tracker",
+  "short_name": "Speed",
+  "description": "Records and displays your phone's speed using GPS.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0f1a",
+  "theme_color": "#0b0f1a",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>Speed Tracker</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.svg" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Speed&nbsp;Tracker</h1>
+      <button id="unitToggle" class="unit-toggle" aria-label="Toggle units">km/h</button>
+    </header>
+
+    <section class="gauge" aria-live="polite">
+      <svg viewBox="0 0 200 200" class="gauge-svg" aria-hidden="true">
+        <circle class="gauge-track" cx="100" cy="100" r="88" />
+        <circle id="gaugeFill" class="gauge-fill" cx="100" cy="100" r="88" />
+      </svg>
+      <div class="gauge-center">
+        <div id="speed" class="speed">0</div>
+        <div id="unitLabel" class="unit-label">km/h</div>
+      </div>
+    </section>
+
+    <p id="status" class="status">Tap Start to begin tracking</p>
+
+    <section class="stats">
+      <div class="stat">
+        <span class="stat-label">Max</span>
+        <span id="maxSpeed" class="stat-value">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Average</span>
+        <span id="avgSpeed" class="stat-value">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Distance</span>
+        <span id="distance" class="stat-value">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Time</span>
+        <span id="elapsed" class="stat-value">0:00</span>
+      </div>
+    </section>
+
+    <div class="controls">
+      <button id="startStop" class="btn btn-primary">Start</button>
+      <button id="reset" class="btn btn-ghost">Reset</button>
+    </div>
+
+    <p class="accuracy" id="accuracy"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
