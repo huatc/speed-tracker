@@ -1,10 +1,13 @@
 // Minimal offline cache for the Speed Tracker PWA.
-const CACHE = 'speed-tracker-v1';
+const CACHE = 'speed-tracker-v2';
 const ASSETS = [
   '.',
   'index.html',
+  'history.html',
   'styles.css',
   'app.js',
+  'logger.js',
+  'chart.js',
   'manifest.webmanifest',
   'icon.svg',
 ];

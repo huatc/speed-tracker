@@ -17,6 +17,12 @@
       <button id="unitToggle" class="unit-toggle" aria-label="Toggle units">km/h</button>
     </header>
 
+    <nav class="nav">
+      <button id="recordToggle" class="record-toggle" aria-pressed="false">○ Start recording</button>
+      <a class="nav-link" href="history.html">History &rarr;</a>
+    </nav>
+    <p id="logStatus" class="log-status"></p>
+
     <section class="gauge" aria-live="polite">
       <svg viewBox="0 0 200 200" class="gauge-svg" aria-hidden="true">
         <circle class="gauge-track" cx="100" cy="100" r="88" />
@@ -57,6 +63,7 @@
     <p class="accuracy" id="accuracy"></p>
   </main>
 
+  <script src="logger.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

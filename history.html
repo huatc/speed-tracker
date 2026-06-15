@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>Speed History</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Speed&nbsp;History</h1>
+      <a class="nav-link" href="index.html">&larr; Live</a>
+    </header>
+
+    <nav class="nav">
+      <button id="recordToggle" class="record-toggle" aria-pressed="false">○ Start recording</button>
+      <span class="window-label">Last 2 hours</span>
+    </nav>
+    <p id="logStatus" class="log-status"></p>
+
+    <section class="chart-stats">
+      <div class="stat">
+        <span class="stat-label">Max (2h)</span>
+        <span id="hMax" class="stat-value">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Now</span>
+        <span id="hNow" class="stat-value">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Readings</span>
+        <span id="hCount" class="stat-value">0</span>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Time over 6mph</span>
+        <span id="hOver" class="stat-value">0:00</span>
+      </div>
+    </section>
+
+    <section class="chart-wrap">
+      <canvas id="chart"></canvas>
+      <p id="chartEmpty" class="chart-empty">No readings yet. Tap “Start recording”, allow location, and the chart fills in as you move.</p>
+    </section>
+
+    <div class="controls">
+      <button id="clearBtn" class="btn btn-ghost">Clear history</button>
+    </div>
+
+    <p class="accuracy">Tip: keep this app open while driving. The screen stays awake automatically.</p>
+  </main>
+
+  <script src="logger.js"></script>
+  <script src="chart.js"></script>
+</body>
+</html>

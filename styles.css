@@ -59,6 +59,91 @@ body {
   cursor: pointer;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.record-toggle {
+  background: var(--bg-elev);
+  color: var(--muted);
+  border: 1px solid var(--track);
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.record-toggle.on {
+  color: #fff;
+  background: var(--danger);
+  border-color: var(--danger);
+}
+
+.nav-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.log-status {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  min-height: 1em;
+  margin-top: -8px;
+}
+
+.window-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.chart-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.chart-stats .stat { padding: 10px 8px; }
+.chart-stats .stat-label { font-size: 0.62rem; }
+.chart-stats .stat-value { font-size: 1.05rem; }
+
+.chart-wrap {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 280px;
+  overflow: hidden;
+  background: var(--bg-elev);
+  border: 1px solid var(--track);
+  border-radius: 16px;
+}
+
+#chart {
+  position: absolute;
+  inset: 8px;
+  width: auto;
+  height: auto;
+  display: block;
+  touch-action: none;
+}
+
+.chart-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 .gauge {
   position: relative;
   width: min(78vw, 320px);

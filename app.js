@@ -183,6 +183,13 @@ el.unitToggle.addEventListener('click', () => {
   renderUnit();
 });
 
+// When background recording is on (and no manual session is active), reflect the
+// latest recorded sample on the gauge so the live page still shows movement.
+window.addEventListener('speedsample', (e) => {
+  if (state.tracking || !e.detail || e.detail.mph == null) return;
+  renderSpeed(e.detail.mph / 2.236936); // mph -> m/s for renderSpeed
+});
+
 renderUnit();
 renderSpeed(0);
 
